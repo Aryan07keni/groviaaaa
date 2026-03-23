@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Grovia – Phone Login</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700" rel="stylesheet">
+
+<script>
+tailwind.config = {
+darkMode:"class",
+theme:{
+extend:{
+colors:{
+primary:"#16a34a",
+background:"#f6f8f7"
+},
+fontFamily:{
+display:["Plus Jakarta Sans","sans-serif"]
+}
+}
+}
+}
+</script>
+
+</head>
+
+<body class="bg-background font-display min-h-screen flex flex-col">
+
+<!-- HEADER -->
+
+<header class="bg-white/80 backdrop-blur-md border-b border-gray-200 h-20 flex items-center px-10">
+
+<div class="text-2xl font-bold text-primary tracking-tight">
+Grovia.
+</div>
+
+</header>
+
+<!-- LOGIN SECTION -->
+
+<main class="flex flex-1 items-center justify-center px-6">
+
+<div class="bg-white border border-gray-200 shadow-xl rounded-3xl p-10 w-full max-w-md">
+
+<h1 class="text-3xl font-extrabold mb-2">
+Login with Phone
+</h1>
+
+<p class="text-gray-500 text-sm mb-8">
+Enter your mobile number to receive a one-time password.
+</p>
+
+<!-- PHONE INPUT -->
+
+<div id="phoneSection">
+
+<label class="text-sm font-semibold text-gray-600">
+Mobile Number
+</label>
+
+<div class="flex mt-2 mb-6">
+
+<span class="bg-gray-100 border border-gray-200 px-4 py-3 rounded-l-xl text-gray-600 font-semibold">
++91
+</span>
+
+<input
+id="phoneNumber"
+type="tel"
+placeholder="9876543210"
+class="flex-1 border border-gray-200 rounded-r-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary"
+/>
+
+</div>
+
+<button
+onclick="sendOTP()"
+class="w-full bg-primary text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-green-700 transition">
+
+<span class="material-symbols-outlined">send</span>
+Send OTP
+
+</button>
+
+</div>
+
+<!-- OTP SECTION -->
+
+<div id="otpSection" class="hidden mt-8">
+
+<label class="text-sm font-semibold text-gray-600">
+Enter OTP
+</label>
+
+<input
+id="otp"
+type="text"
+placeholder="6 digit code"
+class="w-full mt-2 mb-6 border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary"
+/>
+
+<button
+onclick="verifyOTP()"
+class="w-full bg-primary text-white py-3 rounded-xl font-bold hover:bg-green-700 transition">
+
+Verify & Login
+
+</button>
+
+<p class="text-xs text-gray-400 mt-4 text-center">
+Didn't receive OTP?
+<span class="text-primary cursor-pointer">Resend</span>
+</p>
+
+</div>
+
+<div id="recaptcha-container" class="mt-4"></div>
+
+</div>
+
+</main>
+
+<footer class="text-center text-gray-400 text-sm py-6 border-t border-gray-200">
+© 2026 Grovia Marketplaces
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"></script>
+
+<script>
+
+const firebaseConfig = {
+apiKey:"YOUR_API_KEY",
+authDomain:"YOUR_PROJECT.firebaseapp.com",
+projectId:"YOUR_PROJECT_ID",
+};
+
+firebase.initializeApp(firebaseConfig);
+
+const auth = firebase.auth();
+
+window.recaptchaVerifier =
+new firebase.auth.RecaptchaVerifier('recaptcha-container');
+
+function sendOTP(){
+
+let phone = "+91" + document.getElementById("phoneNumber").value;
+
+auth.signInWithPhoneNumber(phone, window.recaptchaVerifier)
+
+.then(function(confirmationResult){
+
+window.confirmationResult = confirmationResult;
+
+document.getElementById("phoneSection").style.display="none";
+document.getElementById("otpSection").classList.remove("hidden");
+
+alert("OTP Sent Successfully");
+
+})
+
+.catch(function(error){
+alert(error.message);
+});
+
+}
+
+function verifyOTP(){
+
+let code = document.getElementById("otp").value;
+
+confirmationResult.confirm(code)
+
+.then(function(result){
+
+alert("Login Successful!");
+
+window.location.href="index.html";
+
+})
+
+.catch(function(error){
+
+alert("Invalid OTP");
+
+});
+
+}
+
+</script>
+
+</body>
+
+</html>

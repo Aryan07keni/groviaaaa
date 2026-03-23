@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Explore Grovia - Desktop</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "emerald-custom": "#065f46",
+                        "background-light": "#fcfcfb",
+                        "background-dark": "#1a1814",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .dark .glass-nav {
+            background: rgba(26, 24, 20, 0.85);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .fill-1 {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#181611] dark:text-gray-100 min-h-screen flex flex-col">
+
+    <header class="sticky top-0 z-50 glass-nav border-b border-gray-200/50 dark:border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 gap-8">
+                
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer group">
+                    <span class="material-symbols-outlined text-primary text-4xl group-hover:scale-105 transition-transform">shopping_basket</span>
+                    <h1 class="text-2xl font-bold tracking-tight text-[#181611] dark:text-white">Grovia</h1>
+                </div>
+
+                <div class="flex-1 max-w-2xl hidden md:block">
+                    <label class="flex w-full h-12 relative shadow-sm group cursor-text">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-gray-500 group-focus-within:text-primary transition-colors">
+                            <span class="material-symbols-outlined">search</span>
+                        </div>
+                        <input class="w-full h-full rounded-full bg-gray-100 dark:bg-gray-800/80 text-[#181611] dark:text-white border-transparent focus:border-primary focus:ring-2 focus:ring-primary/20 pl-12 pr-4 text-base placeholder:text-gray-500 transition-all outline-none" placeholder="Search for atta, dal, or restaurants" value="" />
+                    </label>
+                </div>
+
+                <nav class="hidden md:flex items-center gap-8">
+                    <button class="flex items-center gap-2 text-[#181611] dark:text-white hover:text-primary dark:hover:text-primary transition-colors font-semibold">
+                        <span class="material-symbols-outlined fill-1">home</span>
+                        Home
+                    </button>
+                    <button class="flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-[#181611] dark:hover:text-white transition-colors font-semibold">
+                        <span class="material-symbols-outlined">receipt_long</span>
+                        Orders
+                    </button>
+                    <button class="flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-[#181611] dark:hover:text-white transition-colors font-semibold relative">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                        Cart
+                    </button>
+                    <button class="flex items-center justify-center h-10 w-10 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <span class="material-symbols-outlined">person</span>
+                    </button>
+                </nav>
+
+                <button class="md:hidden text-gray-500">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8">
+        
+        <div class="mb-8 hidden md:block">
+            <h2 class="text-3xl font-bold text-[#181611] dark:text-white">Explore Grovia</h2>
+            <p class="text-gray-500 dark:text-gray-400 mt-2 text-lg">Discover fresh groceries, meals, and more delivered to your door.</p>
+        </div>
+
+        <div class="mb-10">
+            <h3 class="text-[#181611] dark:text-white text-lg font-bold pb-4 flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary">trending_up</span>
+                Trending Searches
+            </h3>
+            <div class="flex flex-wrap gap-3">
+                <button class="flex h-10 items-center justify-center rounded-full bg-white dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 px-6 shadow-sm hover:border-primary dark:hover:border-primary hover:text-primary transition-all">
+                    <p class="text-sm font-semibold">Biryani</p>
+                </button>
+                <button class="flex h-10 items-center justify-center rounded-full bg-white dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 px-6 shadow-sm hover:border-primary dark:hover:border-primary hover:text-primary transition-all">
+                    <p class="text-sm font-semibold">Amul Milk</p>
+                </button>
+                <button class="flex h-10 items-center justify-center rounded-full bg-white dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 px-6 shadow-sm hover:border-primary dark:hover:border-primary hover:text-primary transition-all">
+                    <p class="text-sm font-semibold">Maggi</p>
+                </button>
+                <button class="flex h-10 items-center justify-center rounded-full bg-white dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 px-6 shadow-sm hover:border-primary dark:hover:border-primary hover:text-primary transition-all">
+                    <p class="text-sm font-semibold">Mangoes</p>
+                </button>
+                <button class="flex h-10 items-center justify-center rounded-full bg-white dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 px-6 shadow-sm hover:border-primary dark:hover:border-primary hover:text-primary transition-all">
+                    <p class="text-sm font-semibold">Paneer</p>
+                </button>
+            </div>
+        </div>
+
+        <div>
+            <div class="flex justify-between items-center pb-6">
+                <h3 class="text-[#181611] dark:text-white text-2xl font-bold">Browse Categories</h3>
+                <button class="text-primary text-base font-bold hover:underline">View All Categories</button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="relative overflow-hidden rounded-2xl aspect-[4/3] lg:aspect-square flex flex-col group cursor-pointer shadow-sm">
+                    <img class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?auto=format&fit=crop&q=80&w=600" alt="Fresh Vegetables" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 z-10">
+                        <h4 class="font-bold text-white text-xl md:text-2xl leading-tight tracking-wide group-hover:text-primary transition-colors">Fresh<br/>Vegetables</h4>
+                    </div>
+                </div>
+
+                <div class="relative overflow-hidden rounded-2xl aspect-[4/3] lg:aspect-square flex flex-col group cursor-pointer shadow-sm">
+                    <img class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&q=80&w=600" alt="Indian Masalas" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 z-10">
+                        <h4 class="font-bold text-white text-xl md:text-2xl leading-tight tracking-wide group-hover:text-primary transition-colors">Indian<br/>Masalas</h4>
+                    </div>
+                </div>
+
+                <div class="relative overflow-hidden rounded-2xl aspect-[4/3] lg:aspect-square flex flex-col group cursor-pointer shadow-sm">
+                    <img class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=600" alt="Street Food" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 z-10">
+                        <h4 class="font-bold text-white text-xl md:text-2xl leading-tight tracking-wide group-hover:text-primary transition-colors">Street<br/>Food</h4>
+                    </div>
+                </div>
+
+                <div class="relative overflow-hidden rounded-2xl aspect-[4/3] lg:aspect-square flex flex-col group cursor-pointer shadow-sm">
+                    <img class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=600" alt="Sweets & Snacks" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 z-10">
+                        <h4 class="font-bold text-white text-xl md:text-2xl leading-tight tracking-wide group-hover:text-primary transition-colors">Sweets &<br/>Snacks</h4>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2 relative overflow-hidden rounded-2xl aspect-[2/1] lg:aspect-auto lg:h-64 flex flex-col group cursor-pointer shadow-sm">
+                    <img class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&q=80&w=1200" alt="Dairy & Eggs" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 z-10">
+                        <h4 class="font-bold text-white text-3xl leading-tight tracking-wide group-hover:text-primary transition-colors">Dairy & Eggs</h4>
+                        <p class="text-gray-200 text-base mt-2 font-medium max-w-sm">Farm fresh delivery every morning right to your doorstep.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-gray-200 dark:border-gray-800/50 bg-white dark:bg-[#15130f] py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+            &copy; 2024 Grovia Market. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

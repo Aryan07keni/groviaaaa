@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Grovia - Kirana Products (Desktop View)</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2bee6c",
+                        "saffron": "#FF9933",
+                        "emerald-custom": "#10b981",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body { @apply bg-background-light dark:bg-background-dark font-display text-[#111813] dark:text-white; }
+        }
+        .veg-icon {
+            width: 14px; height: 14px; border: 1px solid #108a00;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 2px; background: white;
+        }
+        .veg-dot { width: 6px; height: 6px; background-color: #108a00; border-radius: 50%; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="flex min-h-screen">
+
+    <aside class="hidden lg:flex flex-col w-72 h-screen sticky top-0 bg-white dark:bg-[#0a160e] border-r border-[#dbe6df] dark:border-[#2a3e31] z-50">
+        <div class="p-6 border-b border-[#dbe6df] dark:border-[#2a3e31]">
+            <div class="flex items-center gap-2 mb-6 cursor-pointer text-saffron">
+                <span class="material-symbols-outlined">arrow_back</span>
+                <span class="font-bold">Back to Markets</span>
+            </div>
+            <h1 class="text-xl font-extrabold text-[#111813] dark:text-white">Grovia Kirana Store</h1>
+            <div class="flex items-center gap-1 text-[#61896f] mt-1">
+                <span class="material-symbols-outlined text-sm">location_on</span>
+                <p class="text-xs font-medium">HSR Layout, Sector 2, Bangalore</p>
+            </div>
+        </div>
+
+        <nav class="flex-1 overflow-y-auto p-4 space-y-2 no-scrollbar">
+            <p class="px-4 text-[10px] font-bold text-[#61896f] uppercase tracking-widest mb-2">Categories</p>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary text-[#102216] font-bold">
+                <span class="material-symbols-outlined">bakery_dining</span> Atta & Dal
+            </a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+                <span class="material-symbols-outlined text-[#61896f]">soup_kitchen</span> Spices & Masala
+            </a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+                <span class="material-symbols-outlined text-[#61896f]">cookie</span> Biscuits & Snacks
+            </a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+                <span class="material-symbols-outlined text-[#61896f]">rice_bowl</span> Rice & Grains
+            </a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
+                <span class="material-symbols-outlined text-[#61896f]">coffee</span> Tea & Coffee
+            </a>
+        </nav>
+
+        <div class="p-6 border-t border-[#dbe6df] dark:border-[#2a3e31]">
+            <div class="bg-primary/10 rounded-2xl p-4 border border-primary/20">
+                <p class="text-xs font-bold text-emerald-700 dark:text-primary mb-1">Store Timing</p>
+                <p class="text-xs text-gray-600 dark:text-gray-400">Open until 10:30 PM</p>
+            </div>
+        </div>
+    </aside>
+
+    <main class="flex-1 flex flex-col">
+        <header class="sticky top-0 z-40 bg-white/80 dark:bg-[#102216]/80 backdrop-blur-md px-8 py-4 border-b border-[#dbe6df] dark:border-[#2a3e31] flex items-center justify-between">
+            <div class="flex-1 max-w-2xl">
+                <div class="relative group">
+                    <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#61896f]">search</span>
+                    <input type="text" placeholder="Search for products in this store..." 
+                           class="w-full h-12 bg-[#f0f4f2] dark:bg-[#1a2e21] border-none rounded-2xl pl-12 pr-4 text-sm focus:ring-2 focus:ring-primary transition-all shadow-sm">
+                </div>
+            </div>
+
+            <div class="flex items-center gap-6 ml-8">
+                <button class="flex items-center gap-2 font-semibold text-[#61896f] hover:text-saffron transition-colors">
+                    <span class="material-symbols-outlined">receipt_long</span>
+                    <span class="hidden xl:inline">My Orders</span>
+                </button>
+                
+                <button class="relative bg-primary text-[#102216] px-6 py-2.5 rounded-2xl font-bold flex items-center gap-3 shadow-lg hover:shadow-primary/20 transition-all">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <span>₹331.00</span>
+                    <span class="bg-[#102216] text-white text-[10px] px-1.5 py-0.5 rounded-md">2</span>
+                </button>
+
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-saffron to-orange-300 flex items-center justify-center text-white cursor-pointer shadow-md">
+                    <span class="material-symbols-outlined">person</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="max-w-6xl mx-auto w-full p-8">
+            <div class="mb-10 h-40 rounded-[2.5rem] bg-gradient-to-r from-primary/30 to-emerald-500/10 flex items-center px-12 overflow-hidden relative border border-primary/20">
+                <div class="relative z-10">
+                    <span class="bg-saffron text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest mb-3 inline-block">Flash Sale</span>
+                    <h3 class="text-[#102216] dark:text-white text-3xl font-black leading-tight">Up to 20% off on<br/>Aashirvaad Range</h3>
+                </div>
+                <div class="absolute right-10 top-0 h-full flex items-center opacity-10 rotate-12">
+                    <span class="material-symbols-outlined text-[180px]">shopping_bag</span>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h3 class="text-2xl font-black text-[#111813] dark:text-white mb-1">Atta, Rice & Dal</h3>
+                    <p class="text-[#61896f] text-sm">Showing 24 products in this category</p>
+                </div>
+                <div class="flex gap-2">
+                    <button class="p-2 border border-[#dbe6df] dark:border-[#2a3e31] rounded-lg hover:bg-white dark:hover:bg-white/5 transition-colors">
+                        <span class="material-symbols-outlined text-sm">tune</span>
+                    </button>
+                    <button class="px-4 py-2 border border-[#dbe6df] dark:border-[#2a3e31] rounded-lg text-sm font-semibold flex items-center gap-2 bg-white dark:bg-[#1a2e21]">
+                        Sort by: Relevance <span class="material-symbols-outlined text-xs">expand_more</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div class="group flex flex-col bg-white dark:bg-[#1a2e21] rounded-3xl overflow-hidden shadow-sm border border-[#dbe6df]/50 dark:border-[#2a3e31] hover:shadow-xl transition-all duration-300">
+                    <div class="relative aspect-square bg-[#f0f4f2] dark:bg-[#102216] flex items-center justify-center p-8 group-hover:p-6 transition-all">
+                        <div class="absolute top-4 left-4 z-10 scale-125">
+                            <div class="veg-icon"><div class="veg-dot"></div></div>
+                        </div>
+                        <div class="w-full h-full bg-center bg-no-repeat bg-contain" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAQVvvl34W6mUCB8F2d5bqkC8AnSrwv30k5ZMm5DKCHm7O67BNYn8uBObJ33yAJInBu1WS7COC476HfxyMIZTnjgz5FqI7GXaUjJo8GiZhnDz6_LwZ4bE4AFJWpQPt5tRYpno_RgxMUZjTmN9kjPPlwXXRIIZg5u9hr5SB-Afzd2L_jAHcQ0Ibt_q4XMIwgLADksdcvm6dbNft7ZZ4s9cEYKrZ1BWPGXw49jf895vRTB3kq_dNUtyLp04urCKhokw1tDrJ-isnYDJA");'></div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-1">
+                        <p class="text-[10px] font-black uppercase text-emerald-custom tracking-widest mb-1">Aashirvaad</p>
+                        <h4 class="text-[#111813] dark:text-white font-bold leading-snug mb-2 group-hover:text-emerald-custom transition-colors">Select Sharbati Whole Wheat Atta</h4>
+                        <p class="text-[#61896f] text-xs font-medium mb-4">5 kg Pack</p>
+                        <div class="mt-auto flex items-center justify-between">
+                            <div class="flex flex-col">
+                                <p class="text-[#111813] dark:text-white text-xl font-black">₹265</p>
+                                <p class="text-[#61896f] text-xs line-through">₹290</p>
+                            </div>
+                            <button class="bg-primary hover:bg-emerald-400 text-[#102216] px-5 py-2 rounded-2xl flex items-center gap-2 font-black text-xs transition-all active:scale-95 shadow-lg shadow-primary/10">
+                                <span class="material-symbols-outlined text-sm">add</span> ADD
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group flex flex-col bg-white dark:bg-[#1a2e21] rounded-3xl overflow-hidden shadow-sm border border-[#dbe6df]/50 dark:border-[#2a3e31] hover:shadow-xl transition-all duration-300">
+                    <div class="relative aspect-square bg-[#f0f4f2] dark:bg-[#102216] flex items-center justify-center p-8 group-hover:p-6 transition-all">
+                        <div class="absolute top-4 left-4 z-10 scale-125">
+                            <div class="veg-icon"><div class="veg-dot"></div></div>
+                        </div>
+                        <div class="w-full h-full bg-center bg-no-repeat bg-contain" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuALPZlGLiCLy6u1qPEvtyzdQyhVzjsnPtaU3WQTV935fNWy065gc7-5ejVPFf3Qy58zWBaYGiEP82vM4DuyeFhba42uFT6D5jXgn9ZjpoeITNV0Lai-X28AXJIB2spcR-FHvFrfXIB24JSnpqysad_m2TsYwOoH98XciTTK-kick1aJzP10hoxi-9_KOLiUR5T36HlQruBQCONDeykq6VRnAzGYSMv0bqRzxtRo-d7Bi3g2kEzNCBazwBgSSu1LTqw9pm4Zyj9Qio0");'></div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-1">
+                        <p class="text-[10px] font-black uppercase text-emerald-custom tracking-widest mb-1">Amul</p>
+                        <h4 class="text-[#111813] dark:text-white font-bold leading-snug mb-2 group-hover:text-emerald-custom transition-colors">Gold Full Cream Milk</h4>
+                        <p class="text-[#61896f] text-xs font-medium mb-4">1 L Pouch</p>
+                        <div class="mt-auto flex items-center justify-between">
+                            <div class="flex flex-col">
+                                <p class="text-[#111813] dark:text-white text-xl font-black">₹66</p>
+                                <p class="text-transparent text-xs opacity-0">.</p>
+                            </div>
+                            <button class="bg-primary hover:bg-emerald-400 text-[#102216] px-5 py-2 rounded-2xl flex items-center gap-2 font-black text-xs transition-all active:scale-95 shadow-lg shadow-primary/10">
+                                <span class="material-symbols-outlined text-sm">add</span> ADD
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

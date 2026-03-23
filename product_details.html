@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Grovia - Product Details (Desktop)</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec6d13",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221810",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <style>
+        .indian-motif {
+            background-image: radial-gradient(#ec6d13 0.5px, transparent 0.5px);
+            background-size: 16px 16px;
+            opacity: 0.05;
+        }
+        body { min-height: 100vh; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#181411] dark:text-[#f8f7f6] antialiased">
+    
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl border-b border-gray-100 dark:border-white/10">
+        <div class="max-w-7xl mx-auto px-10 h-24 flex items-center justify-between">
+            <div class="flex items-center gap-12">
+                <div class="flex items-center gap-4 cursor-pointer group">
+                    <div class="size-10 bg-primary rounded-xl flex items-center justify-center text-white">
+                        <span class="material-symbols-outlined font-bold">arrow_back</span>
+                    </div>
+                    <span class="font-extrabold text-2xl tracking-tight text-primary">Grovia</span>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-2 text-sm font-medium text-gray-500">
+                    <span>Home</span>
+                    <span class="material-symbols-outlined text-xs">chevron_right</span>
+                    <span>Kirana</span>
+                    <span class="material-symbols-outlined text-xs">chevron_right</span>
+                    <span>Atta & Flour</span>
+                    <span class="material-symbols-outlined text-xs">chevron_right</span>
+                    <span class="text-primary font-bold">Aashirvaad Atta</span>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button class="flex items-center gap-2 bg-gray-100 dark:bg-white/5 px-4 py-2 rounded-xl text-sm font-bold">
+                    <span class="material-symbols-outlined text-lg text-primary">location_on</span>
+                    HSR Layout, Bangalore
+                </button>
+                <div class="h-8 w-px bg-gray-200 dark:bg-white/10 mx-2"></div>
+                <button class="relative size-12 flex items-center justify-center rounded-2xl bg-primary text-white shadow-lg shadow-primary/20">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <span class="absolute -top-1 -right-1 bg-black text-white text-[10px] font-bold size-5 rounded-full flex items-center justify-center border-2 border-white">2</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-10 pt-36 pb-24">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            
+            <div class="lg:col-span-7">
+                <div class="sticky top-36 space-y-6">
+                    <div class="relative w-full bg-white dark:bg-white/5 flex items-center justify-center overflow-hidden rounded-[3rem] aspect-square shadow-2xl shadow-black/5">
+                        <div class="w-full h-full bg-center bg-no-repeat bg-contain transform hover:scale-105 transition-transform duration-700" 
+                             style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGbRBZmgnImq7F2LP6l7NlUPQzhOjbXcXDBTwUWhUC0WD2wVKxu23jcXDmCx3lHeMniOdS-LQtuPs5G67ccp6PZrMOyhO6mcTIhl5w592wTk4Jg6vAUmQ32lVlrSqJd_uirDwHv9s5v-HiEHUNWZQD3bQvTtHLnMdtogkNDaI9FM0nD6kegVyF3uM-Xq_mnR9NngynF-0nZXLI6DGlfRYiBsROmG5QpYR7-MNcxfoLFDw40o0ohvpQUaz_PSCQzYUiQIfJCB2MnLM");'>
+                        </div>
+                        
+                        <div class="absolute top-8 left-8 flex flex-col gap-2">
+                            <span class="bg-primary text-white text-[11px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest shadow-lg">Bestseller</span>
+                            <div class="flex items-center gap-1 bg-white/95 dark:bg-background-dark/95 px-3 py-1.5 rounded-full border border-green-200 shadow-sm">
+                                <div class="w-2.5 h-2.5 bg-green-600 rounded-full"></div>
+                                <span class="text-green-700 dark:text-green-400 text-[10px] font-bold uppercase">100% Veg</span>
+                            </div>
+                        </div>
+
+                        <button class="absolute bottom-8 right-8 size-12 bg-white/90 backdrop-blur rounded-2xl flex items-center justify-center shadow-lg text-gray-700">
+                            <span class="material-symbols-outlined">zoom_in</span>
+                        </button>
+                    </div>
+
+                    <div class="flex gap-4 overflow-x-auto no-scrollbar pb-2">
+                        <div class="size-24 rounded-2xl border-2 border-primary bg-white p-2 shrink-0 cursor-pointer">
+                            <div class="w-full h-full bg-contain bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGbRBZmgnImq7F2LP6l7NlUPQzhOjbXcXDBTwUWhUC0WD2wVKxu23jcXDmCx3lHeMniOdS-LQtuPs5G67ccp6PZrMOyhO6mcTIhl5w592wTk4Jg6vAUmQ32lVlrSqJd_uirDwHv9s5v-HiEHUNWZQD3bQvTtHLnMdtogkNDaI9FM0nD6kegVyF3uM-Xq_mnR9NngynF-0nZXLI6DGlfRYiBsROmG5QpYR7-MNcxfoLFDw40o0ohvpQUaz_PSCQzYUiQIfJCB2MnLM");'></div>
+                        </div>
+                        <div class="size-24 rounded-2xl border-2 border-transparent hover:border-gray-300 bg-white p-2 shrink-0 cursor-pointer transition-colors">
+                            <div class="w-full h-full bg-contain bg-center bg-no-repeat opacity-50" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGbRBZmgnImq7F2LP6l7NlUPQzhOjbXcXDBTwUWhUC0WD2wVKxu23jcXDmCx3lHeMniOdS-LQtuPs5G67ccp6PZrMOyhO6mcTIhl5w592wTk4Jg6vAUmQ32lVlrSqJd_uirDwHv9s5v-HiEHUNWZQD3bQvTtHLnMdtogkNDaI9FM0nD6kegVyF3uM-Xq_mnR9NngynF-0nZXLI6DGlfRYiBsROmG5QpYR7-MNcxfoLFDw40o0ohvpQUaz_PSCQzYUiQIfJCB2MnLM");'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 flex flex-col">
+                <div class="mb-8">
+                    <p class="text-primary font-black text-sm uppercase tracking-[0.2em] mb-3">Premium Staples</p>
+                    <h1 class="text-[#181411] dark:text-white text-5xl font-extrabold leading-[1.1] mb-4">
+                        Aashirvaad Whole Wheat Atta
+                    </h1>
+                    <div class="flex items-center gap-4">
+                        <div class="flex text-primary">
+                            <span class="material-symbols-outlined filled">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">star_half</span>
+                        </div>
+                        <span class="text-sm font-semibold text-gray-500">(1,240 Reviews)</span>
+                    </div>
+                </div>
+
+                <div class="p-8 bg-white dark:bg-white/5 rounded-[2.5rem] border border-gray-100 dark:border-white/10 shadow-xl shadow-black/[0.02] space-y-6">
+                    <div>
+                        <h3 class="text-base font-bold mb-4 flex items-center gap-2">
+                            Select Pack Size
+                            <span class="text-xs font-medium text-gray-400">(Price incl. of all taxes)</span>
+                        </h3>
+                        <div class="grid grid-cols-1 gap-3">
+                            <div class="group flex items-center justify-between p-5 rounded-2xl border-2 border-transparent bg-background-light dark:bg-white/5 cursor-pointer hover:border-gray-200 transition-all">
+                                <div class="flex items-center gap-4">
+                                    <div class="size-10 rounded-full border border-gray-300 flex items-center justify-center text-xs font-bold">1kg</div>
+                                    <span class="text-lg font-bold">₹60.00</span>
+                                </div>
+                                <div class="size-6 rounded-full border-2 border-gray-300"></div>
+                            </div>
+
+                            <div class="flex items-center justify-between p-5 rounded-2xl border-2 border-primary bg-primary/[0.03] cursor-pointer relative overflow-hidden">
+                                <div class="absolute top-0 right-0 bg-primary text-white text-[9px] font-black px-4 py-1 rounded-bl-xl uppercase tracking-tighter">Recommended</div>
+                                <div class="flex items-center gap-4">
+                                    <div class="size-10 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold">5kg</div>
+                                    <div class="flex flex-col">
+                                        <span class="text-lg font-black text-primary">₹285.00</span>
+                                        <span class="text-[10px] text-gray-500 line-through">₹310.00</span>
+                                    </div>
+                                </div>
+                                <div class="size-6 rounded-full bg-primary flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-sm">check</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 pt-4">
+                        <div class="flex items-center bg-gray-100 dark:bg-white/10 rounded-2xl p-1 shrink-0">
+                            <button class="size-12 flex items-center justify-center hover:bg-white dark:hover:bg-white/20 rounded-xl transition-colors">
+                                <span class="material-symbols-outlined">remove</span>
+                            </button>
+                            <span class="w-12 text-center font-bold text-lg">1</span>
+                            <button class="size-12 flex items-center justify-center hover:bg-white dark:hover:bg-white/20 rounded-xl transition-colors">
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                        </div>
+                        <button class="flex-1 bg-primary text-white h-14 rounded-2xl font-black text-lg flex items-center justify-center gap-3 shadow-2xl shadow-primary/30 hover:-translate-y-1 active:translate-y-0 transition-all">
+                            <span class="material-symbols-outlined">shopping_basket</span>
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 pt-4 border-t border-gray-100 dark:border-white/10">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">speed</span>
+                            <div class="text-[11px] font-bold">
+                                <p class="text-gray-400 uppercase">Express Delivery</p>
+                                <p class="text-emerald-600">Within 15-20 Mins</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">verified_user</span>
+                            <div class="text-[11px] font-bold">
+                                <p class="text-gray-400 uppercase">Quality Check</p>
+                                <p class="">100% Authentic</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10 space-y-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 border-b pb-2">Product Description</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Aashirvaad Whole Wheat Atta is made from the finest grains - heavy on the palm, golden in colour and hard in bite. It is ground using modern chakki process which ensures that Aashirvaad contains 0% Maida and 100% Sampoorna Atta.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 dark:bg-white/5 p-8 rounded-3xl">
+                        <h3 class="text-lg font-bold mb-4">Nutritional Facts <span class="text-xs font-medium text-gray-400">(Per 100g)</span></h3>
+                        <div class="grid grid-cols-4 gap-4">
+                            <div class="text-center bg-white dark:bg-white/5 p-3 rounded-2xl">
+                                <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">Energy</p>
+                                <p class="font-bold text-sm">367kcal</p>
+                            </div>
+                            <div class="text-center bg-white dark:bg-white/5 p-3 rounded-2xl">
+                                <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">Protein</p>
+                                <p class="font-bold text-sm">10.1g</p>
+                            </div>
+                            <div class="text-center bg-white dark:bg-white/5 p-3 rounded-2xl">
+                                <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">Carbs</p>
+                                <p class="font-bold text-sm">73g</p>
+                            </div>
+                            <div class="text-center bg-white dark:bg-white/5 p-3 rounded-2xl">
+                                <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">Fat</p>
+                                <p class="font-bold text-sm">1.7g</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
